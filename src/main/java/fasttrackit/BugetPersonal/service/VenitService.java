@@ -22,7 +22,7 @@ public class VenitService {
     // obtinem venit dupa id
     public VenitEntity getByIdVenit(int id) {
         return venitRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Cheltuiala lipseste", id));
+                .orElseThrow(() -> new ResourceNotFoundException("Cheltuiala lipseste! Id = ", id));
     }
 
     // Obtinem toate veniturile

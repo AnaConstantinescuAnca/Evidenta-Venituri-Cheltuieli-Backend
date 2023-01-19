@@ -41,7 +41,7 @@ public class CheltuialaService {
     // Metoda prin care se face update pe Cheltuiala dupa id
     public CheltuialaEntity updateCheltuiala(int id, CheltuialaEntity cheltuiala) {
         CheltuialaEntity cheltuialaToBeUpdated = cheltuialaRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Cheltuiala lipseste", id));
+                .orElseThrow(() -> new ResourceNotFoundException("Cheltuiala lipseste! Id = ", id));
         cheltuialaToBeUpdated.setData(cheltuiala.getData());
         cheltuialaToBeUpdated.setTip(cheltuiala.getTip());
         cheltuialaToBeUpdated.setValoare(cheltuiala.getValoare());
@@ -72,4 +72,6 @@ public class CheltuialaService {
 
         return  cheltuialaRepository.save(cheltuialaToUpdate);
     }
+
+
 }

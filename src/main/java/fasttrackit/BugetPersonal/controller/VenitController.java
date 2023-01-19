@@ -1,14 +1,11 @@
 package fasttrackit.BugetPersonal.controller;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import fasttrackit.BugetPersonal.controller.dto.VenitOverviewDTO;
 import fasttrackit.BugetPersonal.entity.VenitEntity;
 import fasttrackit.BugetPersonal.model.VenituriFilter;
 import fasttrackit.BugetPersonal.service.VenitService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.ResponseEntity;
+
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
