@@ -36,16 +36,4 @@ public class VenitEntity {
         this.tip = tip;
     }
 
-//    @Override
-//    public boolean equals(Object o) {
-//        if (this == o) return true;
-//        if (o == null || getClass() != o.getClass()) return false;
-//        VenitEntity that = (VenitEntity) o;
-//        return id == that.id && valoare == that.valoare && Objects.equals(data, that.data) && tip == that.tip;
-//    }
-//
-//    @Override
-//    public int hashCode() {
-//        return Objects.hash(id, valoare, data, tip);
-//    }
 }

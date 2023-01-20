@@ -2,7 +2,6 @@ package fasttrackit.BugetPersonal.controller;
 
 import fasttrackit.BugetPersonal.controller.dto.CheltuialaOverviewDTO;
 import fasttrackit.BugetPersonal.entity.CheltuialaEntity;
-import fasttrackit.BugetPersonal.entity.VenitEntity;
 import fasttrackit.BugetPersonal.model.CheltuieliFilter;
 import fasttrackit.BugetPersonal.service.CheltuialaService;
 import lombok.RequiredArgsConstructor;
@@ -15,6 +14,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class CheltuialaController {
     private final CheltuialaService cheltuialaService;
+
 
     /*
      * Obtine toate cheltuielile; http://localhost:8080/cheltuielile
@@ -38,7 +38,7 @@ public class CheltuialaController {
 
     // Actualizare cheltuiala update
     @PutMapping("{id}")
-    CheltuialaEntity updateCheltuiala(@PathVariable int id, @RequestBody CheltuialaEntity cheltuiala){
+    CheltuialaEntity updateCheltuiala(@PathVariable int id, @RequestBody CheltuialaEntity cheltuiala) {
         return cheltuialaService.updateCheltuiala(id, cheltuiala);
     }
 
@@ -53,5 +53,4 @@ public class CheltuialaController {
     public CheltuialaEntity patchCheltuialaEntity(@PathVariable int id, @RequestBody CheltuialaEntity patchCheltuialaVal) {
         return cheltuialaService.partialUpdate(id, patchCheltuialaVal);
     }
-
 }

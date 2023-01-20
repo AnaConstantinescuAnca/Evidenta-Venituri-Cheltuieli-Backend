@@ -56,9 +56,9 @@ public class VenitService {
     }
 
     /*
-    * @param patchVenit
-    *   parametrul transmis de centroller
-    * */
+     * @param patchVenit
+     *   parametrul transmis de centroller
+     * */
     public VenitEntity partialUpdate(int id, VenitEntity patchVenit) {
 
         VenitEntity venitToUpdate = getByIdVenit(id);
@@ -67,6 +67,6 @@ public class VenitService {
         venitToUpdate.setData(patchVenit.getData() != null ? patchVenit.getData() : venitToUpdate.getData());
         venitToUpdate.setTip(patchVenit.getTip() != null ? patchVenit.getTip() : venitToUpdate.getTip());
 
-        return  venitRepository.save(venitToUpdate);
+        return venitRepository.save(venitToUpdate);
     }
 }

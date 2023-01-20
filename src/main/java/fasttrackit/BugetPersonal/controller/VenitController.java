@@ -15,6 +15,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class VenitController {
     private final VenitService venitService;
+
     /*
      * Obtine toate veniturile; http://localhost:8080/venituri
      * Obtine toate veniturile filtrate dupa tip venit; http://localhost:8080/venituri?tip=DOBANDA
@@ -34,7 +35,7 @@ public class VenitController {
 
     // Actualizeaza venit update
     @PutMapping("{id}")
-    VenitEntity updateVenit(@PathVariable int id, @RequestBody VenitEntity venit){
+    VenitEntity updateVenit(@PathVariable int id, @RequestBody VenitEntity venit) {
         return venitService.updateVenit(id, venit);
     }
 
@@ -49,4 +50,5 @@ public class VenitController {
     public VenitEntity patchVenitEntity(@PathVariable int id, @RequestBody VenitEntity patchVenitVal) {
         return venitService.partialUpdate(id, patchVenitVal);
     }
+
 }

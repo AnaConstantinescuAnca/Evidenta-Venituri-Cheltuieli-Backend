@@ -1,7 +1,6 @@
 package fasttrackit.BugetPersonal.service;
 
 import fasttrackit.BugetPersonal.entity.CheltuialaEntity;
-import fasttrackit.BugetPersonal.entity.VenitEntity;
 import fasttrackit.BugetPersonal.exception.ResourceNotFoundException;
 import fasttrackit.BugetPersonal.loader.CheltuieliReader;
 import fasttrackit.BugetPersonal.model.CheltuieliFilter;
@@ -55,13 +54,6 @@ public class CheltuialaService {
         return cheltuialaToBeDeleted;
     }
 
-    /*
-     * @param patchCheltuiala
-     *   parametrul transmis de centroller
-     * */ /*
-     * @param patchCheltuiala
-     *   parametrul transmis de centroller
-     * */
     public CheltuialaEntity partialUpdate(int id, CheltuialaEntity patchCheltuiala) {
 
         CheltuialaEntity cheltuialaToUpdate = getByIdCheltuiala(id);
@@ -70,8 +62,7 @@ public class CheltuialaService {
         cheltuialaToUpdate.setData(patchCheltuiala.getData() != null ? patchCheltuiala.getData() : cheltuialaToUpdate.getData());
         cheltuialaToUpdate.setTip(patchCheltuiala.getTip() != null ? patchCheltuiala.getTip() : cheltuialaToUpdate.getTip());
 
-        return  cheltuialaRepository.save(cheltuialaToUpdate);
+        return cheltuialaRepository.save(cheltuialaToUpdate);
     }
-
 
 }
